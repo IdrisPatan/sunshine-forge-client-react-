@@ -11,6 +11,7 @@ class App extends Component {
         memory: '',
         disk: '',
         spaces: []
+
       }
   }
 // comment
@@ -56,7 +57,7 @@ class App extends Component {
           <label htmlFor="disk">Disk</label>
           <input name="disk"  onChange={(e) => this.handleInputs(e, 'disk')}/>
           <button id='create' type="button" onClick={() => this.createSpace()}>Create</button>
-          <SpaceList/>
+          <SpaceList spaceListRecieved={this.state.spaces}/>
       </div>
     );
   }

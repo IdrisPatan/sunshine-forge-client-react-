@@ -1,8 +1,10 @@
 import React from 'react'
 
-const SpaceList = () => {
+const SpaceList = ({spaceListRecieved}) => {
     return(
-        <p>I am on Spaces list Page</p>
+        <div>
+            {spaceListRecieved.map((space) => <p>{space.name}</p>)}
+        </div>
     )
 }
 
